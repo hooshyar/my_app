@@ -13,7 +13,7 @@ import 'package:my_app/src/screens/home/home_screen.dart';
 import 'package:my_app/src/servers/location_servers.dart';
 
 class LocationOfUser extends StatelessWidget {
-  LocationOfUser({super.key, required this.userOfApp});
+  LocationOfUser({Key? key, required this.userOfApp}) : super(key: key);
 
   UserOfApp userOfApp;
 

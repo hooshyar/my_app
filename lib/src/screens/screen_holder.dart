@@ -10,7 +10,7 @@ import 'package:my_app/src/screens/home/cart.dart';
 import 'package:my_app/src/screens/home/home_screen.dart';
 
 class ScreenHolder extends StatelessWidget {
-  ScreenHolder({super.key});
+  ScreenHolder({Key? key}) : super(key: key);
   FirebaseAuth auth = FirebaseAuth.instance;
   @override
   Widget build(BuildContext context) {

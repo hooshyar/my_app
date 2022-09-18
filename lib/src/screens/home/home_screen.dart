@@ -6,7 +6,7 @@ import 'package:my_app/src/screens/home/favorite.dart';
 import 'package:my_app/src/screens/home/homescreen_list_of_food.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+  const HomeScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

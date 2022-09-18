@@ -7,7 +7,7 @@ import 'package:my_app/src/screens/home/home_screen.dart';
 import 'package:my_app/src/screens/home/profile.dart';
 
 class BottomNavigationBarForScreens extends StatefulWidget {
-  const BottomNavigationBarForScreens({super.key});
+  const BottomNavigationBarForScreens({Key? key}) : super(key: key);
 
   @override
   State<BottomNavigationBarForScreens> createState() =>

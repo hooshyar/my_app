@@ -4,7 +4,7 @@ import 'package:my_app/src/models/foods.dart';
 import 'package:my_app/src/class/order_test.dart';
 
 class Cart extends StatefulWidget {
-  Cart({super.key, this.thefood, this.count});
+  Cart({Key? key, this.thefood, this.count}) : super(key: key);
   Food? thefood;
   int? count;
 

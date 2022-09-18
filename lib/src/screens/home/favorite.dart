@@ -5,7 +5,7 @@ import 'package:my_app/src/class/favorite_food.dart';
 import 'package:my_app/src/models/foods.dart';
 
 class Favotite extends StatefulWidget {
-  const Favotite({super.key});
+  const Favotite({Key? key}) : super(key: key);
 
   @override
   State<Favotite> createState() => _FavotiteState();

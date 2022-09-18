@@ -7,7 +7,7 @@ import 'package:my_app/src/servers/auth_service.dart';
 import 'package:my_app/src/servers/firestore_service.dart';
 
 class Singup extends StatefulWidget {
-  const Singup({super.key});
+  const Singup({Key? key}) : super(key: key);
 
   @override
   State<Singup> createState() => _SingupState();

@@ -9,7 +9,7 @@ import 'package:my_app/src/class/order_test.dart';
 import 'package:my_app/src/screens/home/cart.dart';
 
 class DetailScreen extends StatefulWidget {
-  DetailScreen({super.key, required this.food});
+  DetailScreen({Key? key, required this.food});
   Food food;
   @override
   State<DetailScreen> createState() => _DetailScreenState();
@@ -43,7 +43,7 @@ class _DetailScreenState extends State<DetailScreen> {
                 icon: const Icon(Icons.favorite),
                 tooltip: 'add to favorite',
                 onPressed: () {
-                  FavoriteItem().addfood(newfood: widget().food);
+                  FavoriteItem().addfood(newfood: widget.food);
                 },
               ),
             )
@@ -70,13 +70,13 @@ class _DetailScreenState extends State<DetailScreen> {
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(30),
                         child: Image.network(
-                          widget().food.image,
+                          widget.food.image,
                           fit: BoxFit.cover,
                         ),
                       )),
                   Container(
                     child: Text(
-                      widget().food.name,
+                      widget.food.name,
                       style: TextStyle(
                         fontSize: 25,
                         fontWeight: FontWeight.bold,
@@ -85,7 +85,7 @@ class _DetailScreenState extends State<DetailScreen> {
                   ),
                   Container(
                     child: Text(
-                      '\$ ${widget().food.price}',
+                      '\$ ${widget.food.price}',
                       style: TextStyle(
                           fontSize: 25,
                           fontWeight: FontWeight.bold,
@@ -94,7 +94,7 @@ class _DetailScreenState extends State<DetailScreen> {
                   ),
                   Container(
                     child: Text(
-                      widget().food.details,
+                      widget.food.details,
                       style: TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
@@ -137,7 +137,7 @@ class _DetailScreenState extends State<DetailScreen> {
                       child: ElevatedButton(
                           onPressed: () {
                             FoodInCart().addfood(
-                                newfood: widget().food, count: itemIndex);
+                                newfood: widget.food, count: itemIndex);
                           },
                           child: Text('add to cart'),
                           style: ElevatedButton.styleFrom(

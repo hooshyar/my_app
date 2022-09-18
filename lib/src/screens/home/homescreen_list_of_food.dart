@@ -8,7 +8,7 @@ import 'package:my_app/src/models/foods.dart';
 import 'package:my_app/src/screens/home/detaile_Screen.dart';
 
 class FoodList extends StatefulWidget {
-  FoodList({super.key, required this.hight});
+  FoodList({Key? key, required this.hight}) : super(key: key);
   double hight;
 
   @override
@@ -36,11 +36,11 @@ class _FoodListState extends State<FoodList> {
       type = 'burger';
     }
     return Container(
-      height: widget().hight * 0.8,
+      height: widget.hight * 0.8,
       child: ListView(
         children: [
           Container(
-            height: widget().hight * 0.8 * 0.2,
+            height: widget.hight * 0.8 * 0.2,
             child: Row(children: [
               makebutton('burger'),
               makebutton('drinkies'),
@@ -64,14 +64,14 @@ class _FoodListState extends State<FoodList> {
                   food.where((element) => element.categories == type).toList();
 
               return Container(
-                height: widget().hight * 0.8,
+                height: widget.hight * 0.8,
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: GridView.builder(
                       gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
                           maxCrossAxisExtent:
                               MediaQuery.of(context).size.width * 0.5,
-                          mainAxisExtent: widget().hight * 0.8 * 0.7,
+                          mainAxisExtent: widget.hight * 0.8 * 0.7,
                           childAspectRatio: 3 / 2,
                           crossAxisSpacing: 20,
                           mainAxisSpacing: 30),
@@ -86,7 +86,7 @@ class _FoodListState extends State<FoodList> {
                             child: Hero(
                               tag: '${filterfood[index].name}',
                               child: Container(
-                                height: widget().hight * 0.8 * 0.6,
+                                height: widget.hight * 0.8 * 0.6,
                                 width: MediaQuery.of(context).size.width * 0.5,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(30),
@@ -104,7 +104,7 @@ class _FoodListState extends State<FoodList> {
                                       borderRadius: BorderRadius.circular(30),
                                       child: Container(
                                           height:
-                                              widget().hight * 0.8 * 0.7 * 0.4,
+                                              widget.hight * 0.8 * 0.7 * 0.4,
                                           width: MediaQuery.of(context)
                                                   .size
                                                   .width *
@@ -112,7 +112,7 @@ class _FoodListState extends State<FoodList> {
                                           child: FittedBox(
                                               child: Image.network(
                                                 '${filterfood[index].image}',
-                                                height: widget().hight *
+                                                height: widget.hight *
                                                     0.8 *
                                                     0.7 *
                                                     0.4,
@@ -124,7 +124,7 @@ class _FoodListState extends State<FoodList> {
                                               fit: BoxFit.cover)),
                                     ),
                                     SizedBox(
-                                      height: widget().hight * 0.8 * 0.7 * 0.3,
+                                      height: widget.hight * 0.8 * 0.7 * 0.3,
                                       child: Text(
                                         '${filterfood[index].name}',
                                         style: TextStyle(
@@ -134,7 +134,7 @@ class _FoodListState extends State<FoodList> {
                                       ),
                                     ),
                                     Container(
-                                      height: widget().hight * 0.8 * 0.7 * 0.2,
+                                      height: widget.hight * 0.8 * 0.7 * 0.2,
                                       child: Text(
                                         '\$${filterfood[index].price.toString()}',
                                         style: TextStyle(

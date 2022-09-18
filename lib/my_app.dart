@@ -9,7 +9,7 @@ import 'package:my_app/src/screens/home/home_screen.dart';
 import 'package:my_app/src/screens/screen_holder.dart';
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

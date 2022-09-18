@@ -5,7 +5,7 @@ import 'package:my_app/src/screens/home/home_screen.dart';
 import 'package:my_app/src/servers/auth_service.dart';
 
 class LoginInput extends StatefulWidget {
-  const LoginInput({super.key});
+  const LoginInput({Key? key}) : super(key: key);
 
   @override
   State<LoginInput> createState() => _LoginInputState();
